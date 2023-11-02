@@ -1,0 +1,10 @@
+---
+title: "website"
+---
+
+This is a Quarto website.
+
+Let's see if it really is the case? Wow, it works...
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+

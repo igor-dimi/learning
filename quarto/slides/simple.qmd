@@ -1,0 +1,58 @@
+---
+title: "Habits"
+author: "Igor Dimitrov"
+format: 
+    revealjs:
+        incremental: false
+---
+
+# In the morning
+
+## Getting up
+
+::: {.incremental}
+
+- turn of the alarm
+- get out of bed
+
+:::
+
+## Breakfast
+
+- Eat eggs
+- Drink coffee
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+
+# In the Evening
+
+## Dinner 
+
+- Eat spaghetti
+- Drink wine
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+
+## Columns
+
+:::: {.columns}
+
+::: {.column width="40%"}
+$f(n) := \frac{n^2}{\sum_{i=1}^n i^2 + i}$
+:::
+
+::: {.column width="60%"}
+* this is a list
+* another item
+* yet another one
+::: 
+
+::::
+
+what happens here? 
