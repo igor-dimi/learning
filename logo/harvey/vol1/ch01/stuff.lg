@@ -1,0 +1,39 @@
+to hi
+print [hi. what's your name?]
+print sentence [how are you,] word first readlist "?
+ignore readlist
+print [that's nice.]
+end
+
+to music.quiz
+print [who is the best?]
+if equalp readlist [john] [print [yes] stop]
+print [no, it's john]
+end
+
+to process :instruction
+test emptyp :instruction
+iftrue [type "|? | process readlist stop]
+iffalse [print sentence [|I don't know how to|] first :instruction]
+process 
+process how
+ 		::
+
+
+end
+
+to process3
+test emptyp: instruction
+iftrue [type "|? | process readlist stop]
+iffalse [print sentence [| i don't know how  to|] first :instruction
+]
+end
+
+to start
+cleartext
+print [welcome]
+type "|? |
+wait 100
+print [fool]
+end
+
