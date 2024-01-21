@@ -7,7 +7,7 @@ end
 to hello2
 print "hello
 print [This is logo speaking]
-print [what's new?]
+print [what's new?, adding some line]
 end
 
 to some_proc
