@@ -1,2 +1,16 @@
-;Procedures 
+to hello
+print "hello
+print [This is logo speaking, my friend.]
+print [what's new?]
+end
+
+to hello2
+print "hello
+print [This is logo speaking]
+print [what's new?]
+end
+
+to some_proc
+pr [hey there, dude. How are you?]
+end
 
