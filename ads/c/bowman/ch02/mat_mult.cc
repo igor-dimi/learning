@@ -1,5 +1,7 @@
 #include "mat.hh"
 
+
+//1 outer loop + 2 nested loops => O(n^3)
 void mat_mult(int a[ROWS][COLS], int b[ROWS][COLS], int res[ROWS][COLS])
 {
     for (int i = 0; i < ROWS; i++)
