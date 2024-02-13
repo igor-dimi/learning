@@ -9,4 +9,3 @@ void mat_mult(int a[ROWS][COLS], int b[ROWS][COLS], int res[ROWS][COLS])
                 res[i][j] += a[i][k] * b[k][j];
         }
 }
-
