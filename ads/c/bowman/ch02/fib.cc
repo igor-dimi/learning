@@ -1,3 +1,5 @@
+#include "fib.hh"
+
 long long int fib_rec(int n)
 {
     if (n < 0) return -1;
@@ -17,4 +19,16 @@ long long int fib_it(int n)
         i++;
     } // i == n;
     return(f);
+}
+
+int fib_pos(int n)
+{
+    int i = 0, f = 0, g = 1; //f == fib(i) && g == fib(i + 1)
+    while (f < n) {
+        g += f; // g == fib(i + 2)
+        f = g - f; // f == fib(i + 1)
+        i++;
+    } // f >= n;
+    if (f == n) return (i);
+    return -1;
 }
