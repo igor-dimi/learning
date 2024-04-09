@@ -1,0 +1,109 @@
+---
+title: "Quarto Document"
+author: "Igor Dimitrov"
+date: 'May 22, 2021'
+toc: true
+number-sections: true
+highlight-style: pygments
+format: 
+    html: 
+        code-fold: true
+        html-math-method: katex
+    pdf: 
+        geometry: 
+            - top=30mm
+            - left=20mm
+    docx: default
+reference-location: margin
+jupyter: python3
+---
+
+## Colors 
+
+- Red 
+- Green
+- Blue
+
+## Shapes
+
+- Square 
+- Circle 
+- Triangke
+
+## Textures
+
+- Smooth
+- Bumpy
+- Fuzzy
+
+
+Einstein's theory of special relativity that expresses the equivalence of mass and energy:
+
+$E = mc^{2}$
+
+## Overview
+
+See @fig-simple in @sec-plot for a demonstration of a simple plot.
+
+See @eq-stddev to better understand standard deviation
+
+## Plot {#sec-plot}
+
+```{python}
+#| label: fig-simple
+#| fig-cap: "Simple Plot"
+import matplotlib.pyplot as plt
+plt.plot([1, 23, 2, 4, -3])
+plt.show()
+```
+
+## Equation
+
+$$
+s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x}^2)}
+$$ {#eq-stddev}
+
+## Callout 
+
+::: {.callout-note}
+Note that there are five types of callouts
+:::
+
+:::{.callout-tip}
+This is a tip
+:::
+
+::: {.callout-warning}
+this is a warning!
+:::
+
+::: {.callout-important}
+this is important! 
+:::
+
+## Placing Colorbars
+
+Colorbars indicate the quantitative extent of image data.
+Placing in a figure is non-trivial because room needs to be made for them. The simplest case is just attaching a colorbar to each axes: ^[See the [link](https://www.google.com) to explore further].
+
+
+```{python}
+#| code-fold: true
+#| column: screen-inset
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, axs = plt.subplots(2, 2)
+fig.set_size_inches(20, 8)
+cmaps = ['RdBu_r', 'viridis']
+for col in range(2):
+    for row in range(2):
+        ax = axs[row, col]
+        pcm = ax.pcolormesh(
+            np.random.random((20, 20)) * (col + 1),
+            cmap = cmaps[col]
+        )
+        fig.colorbar(pcm, ax=ax)
+plt.show()
+```
+
