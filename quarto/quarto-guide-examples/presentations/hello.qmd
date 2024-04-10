@@ -111,3 +111,51 @@ Slide content
 ::: footer
 Custom footer text
 :::
+
+
+## Code Blocks
+
+```{.python code-line-numbers="|6|9"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+## Executable Codeblock
+
+
+```{python}
+#| code-line-numbers: "|6|9"
+#| echo: true
+#| output-location: column-fragment
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+## Executable Codeblock Output Location
+
+```{r}
+#| echo: true
+#| output-location: slide
+
+library(ggplot2)
+ggplot(airquality, aes(Temp,  Ozone)) + 
+    geom_point() + 
+    geom_smooth(method = "loess")
+```
