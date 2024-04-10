@@ -1,0 +1,113 @@
+---
+title: "Slides"
+author: "Igor Dimitrov"
+format: 
+    revealjs:
+        incremental: true
+        theme: default
+        footer: "some footer"
+---
+
+# Section 1
+
+## Slide 1
+
+- Item 1
+- Item 2
+
+## Slide 2
+
+# Section 2
+
+## Slide 3
+
+::: {.nonincremental}
+
+- Item 3
+- Item 4
+
+:::
+
+---
+
+- Just another slide that doesn't have a title
+- Another bulletpoint 
+
+## Multiple Columns 
+
+::::: {.columns}
+
+:::: {.column width="40%"}
+::: {.nonincremental}
+- this is some content
+- item
+- item 2
+- item 3
+:::
+::::
+
+:::: {.column width="60%"}
+::: {.nonincremental}
+- some other content
+- item 4
+- item 5
+::: 
+::::
+
+:::: 
+
+---
+
+content before pause
+
+. . .
+
+content after pause 
+
+## Smaller {.smaller}
+
+* some smaller
+* content
+
+## Scrollable {.scrollable .nostretch}
+
+* point 1
+* point 2
+* point 3
+* point 4
+* point 4
+* point 4
+* point 4
+* point 4
+* point 4
+* point 4
+* point 4
+* point 4
+
+## Speaker Notes
+
+Slide 
+
+::: {.notes}
+speaker notes
+:::
+
+## Asides
+
+Slide content
+
+::: aside
+Some additional commentary
+::: 
+
+## Footnotes 
+
+Slide content
+
+- green ^[A footnote]
+- blue
+- red
+
+::: footer
+Custom footer text
+:::

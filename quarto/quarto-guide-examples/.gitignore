@@ -2,3 +2,4 @@
 authoring.docx
 !*.qmd
 !.gitignore
+!presentations
