@@ -1,11 +1,24 @@
 ---
 title: "Slides"
+title-slide-attributes: 
+  data-background-image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Tabby_Kitten_on_Blue_Throw.jpg/1290px-Tabby_Kitten_on_Blue_Throw.jpg
+  data-background-size: contain
+  data-background-color: black
+  data-background-opacity: "0.5"
 author: "Igor Dimitrov"
 format: 
     revealjs:
         incremental: true
         theme: default
         footer: "some footer"
+        slide-number: c/t
+        preview-links: auto
+        slide-tone: false
+        embed-resources: false
+        chalkboard: 
+          theme: chalkboard
+          chalk-width: 4
+          chalk-effect: 0.5
 ---
 
 # Section 1
@@ -159,3 +172,34 @@ ggplot(airquality, aes(Temp,  Ozone)) +
     geom_point() + 
     geom_smooth(method = "loess")
 ```
+
+
+## Tabsets 
+
+::: {.panel-tabset}
+
+### Tab A
+
+this is tab A 
+
+### Tab B 
+
+This is tab B
+
+::: 
+
+## Backgrounds {background-color="aquamarine"}
+
+**Slide**, aquamarine
+
+Are you really that crazy, my dude?
+
+## Image Backgrounds {background-color="black" background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/1434px-Juvenile_Ragdoll.jpg" background-size="250px" background-repeat="repeat"}
+
+This is a kitten
+
+
+## Preview Links
+
+- [matplotlib](https://matplotlib.org/)
+- [matplotlib-no-preview](https://matplotlib.org/){preview-link="false"}
