@@ -23,7 +23,7 @@ format:
 
 # Section 1
 
-## Slide 1
+## Slide 1 
 
 - Item 1
 - Item 2
@@ -188,7 +188,7 @@ This is tab B
 
 ::: 
 
-## Backgrounds {background-color="aquamarine"}
+## Backgrounds {background-color="aquamarine" visibility="uncounted"}
 
 **Slide**, aquamarine
 
@@ -199,8 +199,33 @@ Are you really that crazy, my dude?
 This is a kitten
 
 
-## Preview Links
+## Preview Links {visibilty="uncounted"}
 
 - [matplotlib](https://matplotlib.org/)
 - [matplotlib-no-preview](https://matplotlib.org/){preview-link="false"}
+
+## Stack Layout with `r-stack` {background-color="black" .center}
+
+::: {.r-stack }
+![](kitten1.jpg){.fragment width="950"}
+
+![](kitten2.jpg){.fragment width="700"}
+
+![](kitten3.jpg){.fragment width="350"}
+:::
+
+## Fit Text
+
+:::{.r-fit-text}
+Wow!
+:::
+
+## Stretch {}
+
+::: {.r-stack}
+![](kitten1.jpg){.fragment .nostretch fig-align="center"}
+
+![](kitten1.jpg){.fragment width="500" fig-align="center"}
+:::
+
 
