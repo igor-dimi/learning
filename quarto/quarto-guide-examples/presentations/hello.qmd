@@ -229,3 +229,114 @@ Wow!
 :::
 
 
+## Auto Animate {auto-animate=true}
+
+Animating Content
+
+##  Auto Animate {auto-animate="true"}
+
+::: {style="font-size: 2em; color: red;"}
+Animating Content
+:::
+
+## {auto-animate="true"}
+
+```r
+# Fill in the spot we created for a plot
+outpout$phonePlot <- renderPlot({
+  # Render a barplot
+})
+```
+
+## {auto-animate="true"}
+
+```r
+# Fill in the spot we created for a plot
+outpout$phonePlot <- renderPlot({
+  # Render a barplot
+  barplot(WorldPhones[, input$region]*1000,
+    main=input$region,
+    ylab="Number of Telephones",
+    xlab="Year")
+})
+```
+
+## {auto-animate="true"}
+
+Animation
+
+## {auto-animate="true"}
+
+Implicit 
+
+Animation
+
+## {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+:::: {.r-hstack}
+::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px"}
+:::
+
+::: {data-id="box1" auto-animate-delay="0" style="background: #3fb618; width: 200px; height: 150px; margin: 10px"}
+:::
+
+::: {data-id="box1" auto-animate-delay="0" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px"}
+:::
+::::
+
+## {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+:::: {.r-stack}
+::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+
+::: {data-id="box1" auto-animate-delay="0" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px"}
+:::
+
+::: {data-id="box1" auto-animate-delay="0" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px"}
+:::
+::::
+
+## Fragments
+
+:::{.fragment}
+Fade in
+:::
+
+::: {.fragment .fade-out}
+Fade out
+:::
+
+::: {.fragment .fade-in-then-out}
+Fade in, then out
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+:::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+Highlight red
+:::
+::::
+
+:::: {.fragment .fade-in}
+::: {.fragment .highlight-blue}
+grow
+:::
+::::
+
+## Fragment Order 
+
+::: {.fragment fragment-index=3}
+Appears last
+:::
+
+::: {.fragment fragment-index=1}
+Appears first
+:::
+
+::: {.fragment fragment-index=2}
+Appears second 
+::: 
