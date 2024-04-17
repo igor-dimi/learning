@@ -1,0 +1,40 @@
+project:
+  type: website
+
+website:
+  title: "MySite"
+  navbar:
+    background: primary
+    search: true
+    left: 
+      - text: "Home"
+        file: index.qmd
+      - text: "About"
+        file: about.qmd
+
+  sidebar: 
+    - title: "Home"
+      style: "docked"
+      background: light
+      contents: 
+        - index.qmd
+        - another.qmd
+
+    - title: "About"
+      contents: 
+        - about.qmd
+    
+    - title: "Reference"
+      contents: 
+        - page.qmd
+  
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
+
