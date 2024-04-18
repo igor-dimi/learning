@@ -3,27 +3,42 @@ project:
 
 website:
   title: "MySite"
+  twitter-card: true
+  margin-header: margin header
+  page-navigation: true
+  reader-mode: false
+  repo-url: https://github.com
+  search: 
+    location: navbar
+    type: overlay
+  page-footer:
+    left: "Igor"
+    right:
+      - icon: github
+        href: https://github.com
+      - icon: twitter
+        href: https://twitter.com
+    border: true
+    background: light  
   navbar:
     background: primary
     search: true
     left: 
       - text: "Home"
         file: index.qmd
-      - text: "About"
-        file: about.qmd
+      - sidebar:about
 
   sidebar: 
-    - title: "Home"
+    - id: about
+      title: "About"
       style: "docked"
       background: light
-      contents: 
-        - index.qmd
-        - another.qmd
-
-    - title: "About"
+      collapse-level: 2
       contents: 
         - about.qmd
-    
+        - another-1.qmd
+        - another-2.qmd
+
     - title: "Reference"
       contents: 
         - page.qmd
