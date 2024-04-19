@@ -25,3 +25,5 @@ def gcd_it(a, b) :
     # a == 0 or b == 0
     if a == 0 : return b
     return a
+# new definition
+3 + 3

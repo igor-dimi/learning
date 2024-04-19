@@ -28,6 +28,8 @@ website:
       - text: "Home"
         file: index.qmd
       - sidebar:about
+      - text: "Listing"
+        file: listing.qmd
 
   sidebar: 
     - id: about
@@ -52,7 +54,3 @@ format:
       dark: darkly
     css: styles.css
     toc: true
-
-
-
-
