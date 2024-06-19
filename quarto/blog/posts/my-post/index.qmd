@@ -1,0 +1,9 @@
+---
+title: "New Post"
+author: "Igor Dimitrov"
+date: "2024-04-18"
+description: "post about some stuff"
+draft: true
+---
+
+Some new post with some interesting information

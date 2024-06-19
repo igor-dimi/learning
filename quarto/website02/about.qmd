@@ -1,0 +1,36 @@
+---
+title: "Igor Dimitrov"
+about:
+    id: about-content
+    template: trestles
+    image: kitten.jpg
+    image-shape: round
+    links:
+        - icon: twitter
+          text: twitter
+          href: https://twitter.com
+        - icon: github
+          text: github
+          href: https://github.com
+---
+
+:::{#about-content}
+
+I'm me, just a guy. This is my about page. There really ain't 
+that much to talk about right now. 
+
+## Education
+
+School of life | PhD in breathing | 1993 - present
+
+## Experience
+
+Got No Experience at all | this and that | 2010 - present
+
+:::
+
+### Further Content
+
+This content won't appear in the about portion I guess... 
+
+
