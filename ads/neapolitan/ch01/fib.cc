@@ -9,7 +9,9 @@ int fib_rec(int n)
     return fib_rec(n - 2) + fib_rec(n - 1);
 }
 
-int fib_dyn(int n)
+
+
+int* fib_dyn(int n)
 {
     int* f = new int[n + 1];
     f[0] = 0;
@@ -20,15 +22,23 @@ int fib_dyn(int n)
         for (int i = 2; i <= n; i++)
             f[i] = f[i - 1] + f[i - 2];
     } 
-    return f[n];
+    return f;
      
+}
+
+int fib(int n)
+{
+    int* p = fib_dyn(n);
+    int res = p[n];
+    delete p;
+    return res;
 }
 
 int main(int argc, char const *argv[])
 {
     int n;
     std::cin >> n;
-    std::cout << fib_rec(n) << "\t" << fib_dyn(n) << std::endl;
+    std::cout << fib_rec(n) << "\t" << fib(n) << std::endl;
 
     return 0;
 }
