@@ -1,0 +1,24 @@
+---
+title: Move Semantics in Classes
+execute: 
+    echo: false
+format: 
+    html: default
+    pdf: 
+        code-block-bg: "#eeeeee"
+        code-block-border-left: "#bbbbbb"
+---
+
+* How do ordinary classes benefit from move semantics?
+* How to explicitly implement move operations in classes? 
+
+```{python}
+#| echo: false
+#| panel: input
+!echo "file: customer.hh"
+!echo "----------"
+!echo
+!cat customer.hh
+```
+
+
