@@ -15,10 +15,41 @@ format:
 ```{python}
 #| echo: false
 #| panel: input
-!echo "file: customer.hh"
+!echo "file: customerimpl.hh"
 !echo "----------"
 !echo
-!cat customer.hh
+!cat customerimpl.hh
 ```
+
+```{python}
+#| echo: false
+#| panel: input
+!echo "file: test_customerimpl.cc"
+!echo "----------"
+!echo
+!cat test_customerimpl.cc
+```
+
+output:
+
+```{python}
+#| echo: false
+#| panel: input
+!make test_customerimpl
+!./test_customerimpl
+!rm test_customerimpl
+```
+
+
+## Special Member Functions 
+
+*special member functions*:
+
+* default constructor: `T()`
+* copy constructor: `T(const T&)`
+* copy assignment operator: `T& operator=(const T&)`  
+* Move constructur: `T(T&&)`
+* Move assignment operator: `T& operator=(T&&)`
+* Destructor: `~T()`
 
 
