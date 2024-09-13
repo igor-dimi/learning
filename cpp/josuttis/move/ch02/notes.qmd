@@ -61,4 +61,4 @@ There are three major ways of **call-by-reference**:
                         // can't be typecast to an rvalue ref
      foo(std::move(t1)); // OK, t1 typecast to rvalue ref
      foo("hey"); //OK, "hey" is temp object
-     ```
+     ``

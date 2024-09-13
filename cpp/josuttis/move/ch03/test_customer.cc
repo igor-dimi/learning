@@ -24,5 +24,14 @@ int main(int argc, char const *argv[])
     for (const Customer& cust : customers) 
         std::cout << " " << cust << '\n';
 
+    Customer c1{"George"};
+    for (int val : {0, 1}) c1.addValue(val);
+    Customer c2 = c1;
+
+    std::cout << c1 << std::endl;
+    std::cout << c2 << std::endl;
+
+
+
     return 0;
 }
