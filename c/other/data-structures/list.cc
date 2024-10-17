@@ -44,11 +44,10 @@ void showln(List* l)
     std::cout << std::endl;
 }
 
-void push (List* l, int item)
+List* push (List* l, int item)
 {
-    if (l == 0) {// list empty, insert to the location where l points to
-        List* el = new List(item); 
-    } else {// list not empty, insert at the end
+    List* el = new List(item);
+    if (l != 0) { // list empty, insert to the location where l points to
         List* p = l; 
         while (p->next != 0) {
             p = p->next;
@@ -56,7 +55,10 @@ void push (List* l, int item)
         List* el = new List(item);
         p->next = el;
     }
+    return el;
 }
+
+bool empty(List* l) {return l == 0;}
 
 int main()
 {

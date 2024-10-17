@@ -1,0 +1,59 @@
+---
+title: Move Semantics in Classes
+filters:
+    - include-code-files
+execute: 
+    echo: false
+format: 
+    html: default
+    pdf: 
+        code-block-bg: "#eeeeee"
+        code-block-border-left: "#bbbbbb"
+---
+
+* How do ordinary classes benefit from move semantics?
+* How to explicitly implement move operations in classes? 
+
+```{python}
+#| echo: false
+#| panel: input
+!echo "file: customerimpl.hh"
+!echo "----------"
+!echo
+!cat customerimpl.hh
+```
+
+```{python}
+#| echo: false
+#| panel: input
+!echo "file: test_customerimpl.cc"
+!echo "----------"
+!echo
+!cat test_customerimpl.cc
+```
+
+output:
+
+```{python}
+#| echo: false
+#| panel: input
+!make test_customerimpl
+!./test_customerimpl
+!rm test_customerimpl
+```
+
+
+## Special Member Functions 
+
+*special member functions*:
+
+* default constructor: `T()`
+* copy constructor: `T(const T&)`
+* copy assignment operator: `T& operator=(const T&)`  
+* Move constructur: `T(T&&)`
+* Move assignment operator: `T& operator=(T&&)`
+* Destructor: `~T()`
+
+
+```{.cpp include="test_customerimpl.cc" filename="test_customerimpl.cc" code-line-numbers="true"}
+```

@@ -1,0 +1,64 @@
+---
+title: Core Features of Move Semantics
+---
+
+## Overloading by Different References
+
+There are three major ways of **call-by-reference**:
+
+1. Call by `const` lvalue reference: `void foo(const T& t)`
+ 
+   * Semantic meaning: `foo()` has **only read access** from the argument
+     it receives.
+   * You can pass everything (if the type fits):
+     * modifiable named object
+ 
+       ```cpp
+       T t;
+       foo(t);
+       ```
+     * a constant named object
+ 
+       ```cpp
+       const T t;
+       foo(t);
+       ```
+     * a temporary object that has no name (rvalue)
+ 
+       ```cpp
+       foo("hello") //if T is e.g. std::string
+       foo(bar()) // if bar returns T
+       ```
+ 
+     * an object explicitly marked with `std::move()` (rvalue)
+ 
+       ```cpp
+       T t;
+       foo(std::move(t));
+       ```
+2. Call by a non-const lvalue reference: `void foo(T& t)`
+   * Semantic meaning: `foo()` has has both **read and write** access 
+     access to the passed argument. 
+   * You can only pass a **modifiable** named object:
+     
+     ```cpp
+     T t1;
+     const T t2;
+     foo(t1) // OK
+     foo(t2) // Not OK, won't compile
+     foo("hello") //Not Ok, won't compile
+     ```
+
+3. Call by (non-const) rvalue reference: `void foo(T&& t)`
+   * Semantic meaning: `foo()` has read access to the passed argument, **but** with the intention to steal its value. (move the value away from it to another variable/location). Caller of `foo()` calls `foo(t)` when he doesn't need the value of `t` anymore. 
+   * Only temporary objects, or object explicitly marked with `std::move()` can be passed:
+     ```cpp
+     T t1;
+     const T t2;
+     foo(t1); // Not OK, won't compile
+     foo(t2); // Not OK, won't compile
+     foo(std::move(t2)) // Not Ok, because t2 was declared as const
+                        // can't be typecast to an rvalue ref
+     foo(std::move(t1)); // OK, t1 typecast to rvalue ref
+     foo("hey"); //OK, "hey" is temp object
+     ``

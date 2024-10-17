@@ -10,6 +10,7 @@ void reverse()
     
     while (!empty())
         putchar(pop());
+    // stack is empty
 }
 
 int main(int argc, char const *argv[])
