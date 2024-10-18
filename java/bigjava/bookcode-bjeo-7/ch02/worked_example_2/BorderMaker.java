@@ -11,4 +11,3 @@ public class BorderMaker
       pic.border(10);
    }
 }
-

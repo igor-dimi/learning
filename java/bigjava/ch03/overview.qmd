@@ -1,0 +1,11 @@
+# Overview
+
+1. instance variables and encapsulation
+2. specifying the public interface of a class
+3. providing the class implementation
+4. unit testing
+5. tracing objects
+6. local variables
+7. this reference
+8. shape classes
+
