@@ -1,0 +1,49 @@
+---
+title: I/O & Exceptions Ch 11 
+---
+
+# Reading and Writing Text Files 
+
+
+Construct file object:
+
+```java
+File inputFile = new File("input.txt");
+```
+
+Construct a Scanner object to use the file objet:
+
+```java
+Scanner in = new Scanner(inputFile);
+```
+
+You can use scanner methods to process the file. E.g. to process numbers:
+
+```java
+while(in.hasNextDouble()) {
+    double value = in.nextDouble();
+    // Process value
+}
+```
+
+To write ouput to a file, construct a `PrintWriter` object:
+
+```java
+PrintWriter out = new PrintWriter("output.txt");
+```
+
+`PrintWriter` class is similar to the `PrintStream` class. 
+`System.out` is a `PrintStream` object. Therefore you can use the familiar 
+`print()`, `println()` etc methods:
+
+```java
+out.println("Hello, World!");
+out.printf("Total: %8.2f%n", total);
+```
+
+Close the `Scanner` object `in` and the `PrintWriter` objects `out`:
+
+```java
+in.close();
+out.
+
