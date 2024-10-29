@@ -1,4 +1,4 @@
-import java.io.IOError;
+import java.io.IOException;
 
 /**
  * This class reports bad input data
@@ -10,3 +10,5 @@ public class BadDataException extends IOException {
         super(message);
     }
 }
+
+
