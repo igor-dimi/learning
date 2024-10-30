@@ -15,6 +15,12 @@ public class Question
         answer = "";
     }
 
+    public Question(String question)
+    {
+        this.question = question;
+        answer = "";
+    }
+
     /**
      * Sets the question text
      * @param question the text of this question.
