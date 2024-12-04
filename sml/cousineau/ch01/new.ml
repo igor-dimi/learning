@@ -36,3 +36,32 @@ let rec gcd(x, y) =
     if y = 0 then x
     else gcd(y, x mod y);;
 
+(* 1.4.5 Mutually recursive Functions *)
+
+let rec even n = if n = 0 then true else odd (n - 1)
+    and odd n = if n = 0 then false else even (n - 1);;
+
+(* 1.4.6 Functions defined by case  - Pattern Matching*)
+
+let neg = function true -> false
+            | false -> true;;
+
+(* let xor = function (false, false) -> false
+                 | (false, true) -> true
+                 | (true, false) -> true
+                 | (true, true) -> false;; *)
+
+let xor = function (false, x) -> x
+                 | (true, x) -> neg x
+
+let rec fact = function 0 -> 1
+                      | n -> n * fact(n - 1);;
+
+let rec fib = function
+    0 -> 1 |
+    1 -> 1 |
+    n -> fib(n - 1) + fib(n - 2);;
+
+let conj = function
+    (true, true) -> true |
+     _ -> false;;

@@ -3,7 +3,7 @@ import List
 
 fac n = product [1..n]
 choose n k = fac n / (fac (n - k) * fac k)
-pi = 3.1415926
+-- pi = 3.1415926
 n !^! k = choose n k -- defining own operators
 square x = x * x
 sum_of_squares  list = sum (map square list)
@@ -33,8 +33,8 @@ mySum [x, y, z] = x + y + z
 
 
 -- following pattern matching only works in Gofer, but not in Hugs / Haskell
--- even' (2*n) = True
--- even' (2*n+1) = False
+even' (2*n) = True
+even' (2*n+1) = False
 
 -- 4.4 Definition by recursion or induction(patterns)
 facRec n | n == 0 = 1
@@ -56,3 +56,9 @@ length' [] = 0
 length' (_:tl) = 1 + length' tl
 
 {- this is another comment -}
+
+
+-- 5 Typing
+-- 5.1 Kinds of errors 
+
+isZero x = x == 0
