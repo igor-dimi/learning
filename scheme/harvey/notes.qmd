@@ -1,0 +1,6 @@
+
+
+## Links
+
+* adding simply scheme language to racket stackoverflow discussion [link](https://stackoverflow.com/questions/19203498/adding-simply-scheme-language-to-drracket)
+* get simply scheme working in racket with redefinitions [link](https://gist.github.com/alexgian/5b351f367169b40a4ad809f0bb718e1f)
