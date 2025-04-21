@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 11</title>
+
+    <!-- the react js libraries -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- babel run time library to convert jsx in the browser at run-time -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- language for this block is babel -->
+    <script type="text/babel">
+
+        const example = 
+        <span>
+                <p>Hello world</p>
+                <a href="http://www.google.com">some text</a> 
+        </span>
+                        
+
+        const link = <a href="http://www.reactjs.org">
+                        Visit React
+                    </a>
+
+        ReactDOM.render(example, document.querySelector("#react-container-2"));
+        ReactDOM.render(link, document.querySelector("#react-container"));
+
+    </script>
+
+</head>
+<body>
+    <div id="react-container"></div>
+    <div id="react-container-2"></div>
+</body>
+</html>
