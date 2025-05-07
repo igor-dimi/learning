@@ -3,3 +3,4 @@
 # do ignore lexer.c, since it is generated from lexer.l
 lexer.c  
 !.gitignore
+!makefile
