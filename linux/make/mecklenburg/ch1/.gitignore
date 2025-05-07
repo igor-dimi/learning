@@ -1,4 +1,6 @@
 *
-!*.*
 !.gitignore
 !makefile
+!*.l
+!*.c
+lexer.c
